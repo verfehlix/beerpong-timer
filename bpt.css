@@ -1,0 +1,29 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.tischContainer {
+    margin: 15px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.titel {
+    font-family: 'Lobster', sans-serif;
+    margin-left: calc(50% - 600px);
+    padding-top: 50px;
+    padding-bottom: 75px;
+    font-size: 100pt;
+}
+
+.timeDisplay {
+    font-size: 150pt;
+}
+
+.smallText {
+    color: white;
+}

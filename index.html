@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Beer Pong Timer!</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bpt.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <h1 class="titel">Felix' Beer Pong Timer</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="bpt.js"></script>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="tischContainer">
+                <h1 style="color: #9A12B3; font-size: 50pt;">Tisch 1</h1>
+
+                <h1 class="timeDisplay"><span id="timeTisch1">20:00</span><small class="smallText"> min</small></h1>
+
+                <hr>
+
+                <button id="start1" type="button" class="btn btn-default btn-lg">Start Timer!</button>
+
+                <button id="pause1" type="button" class="btn btn-warning btn-lg">Pause / Resume</button>
+
+                <button id="reset1" type="button" class="btn btn-danger btn-lg">Reset</button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="tischContainer">
+
+                <h1 style="color: #F9690E; font-size: 50pt;">Tisch 2</h1>
+
+                <h1 class="timeDisplay"><span id="timeTisch2">20:00</span><small class="smallText"> min</small></h1>
+
+                <hr>
+
+                <button id="start2" type="button" class="btn btn-default btn-lg">Start Timer!</button>
+
+                <button id="pause2" type="button" class="btn btn-warning btn-lg">Pause / Resume</button>
+
+                <button id="reset2" type="button" class="btn btn-danger btn-lg">Reset</button>
+            </div>
+        </div>
+
+    </div>
+
+  </body>
+</html>
