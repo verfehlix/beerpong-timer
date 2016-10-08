@@ -28,7 +28,7 @@ function startTimerTisch1() {
 
             if (--timer < 0) {
                 timer = timeInSeconds;
-                clearInterval(timer2IntervalId);
+                clearInterval(timer1IntervalId);
             }
 
         }
