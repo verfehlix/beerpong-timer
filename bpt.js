@@ -3,7 +3,7 @@ var pauseTisch2 = false;
 var timer1IntervalId;
 var timer2IntervalId;
 
-function startTimerTisch1(durationInSeconds) {
+function startTimerTisch1() {
     var display = document.querySelector('#timeTisch1')
 
     var minutes = display.innerHTML.split(":")[0];
@@ -27,14 +27,15 @@ function startTimerTisch1(durationInSeconds) {
             display.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
-                timer = durationInSeconds;
+                timer = timeInSeconds;
+                clearInterval(timer2IntervalId);
             }
 
         }
     }, 1000);
 }
 
-function startTimerTisch2(durationInSeconds) {
+function startTimerTisch2() {
     var display = document.querySelector('#timeTisch2')
 
     var minutes = display.innerHTML.split(":")[0];
@@ -58,7 +59,8 @@ function startTimerTisch2(durationInSeconds) {
             display.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
-                timer = durationInSeconds;
+                timer = timeInSeconds;
+                clearInterval(timer2IntervalId);
             }
 
         }
