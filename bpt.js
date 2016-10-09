@@ -70,27 +70,57 @@ function startTimerTisch2() {
 
 window.onload = function () {
     $('#start1').on('click', function (e) {
+
         startTimerTisch1();
+        // $('#start1').addClass("disabled")
+        $('#start1').prop('disabled', true);
+        $('#pause1').prop('disabled', false);
+        $('#reset1').prop('disabled', false);
+
     });
     $('#pause1').on('click', function (e) {
+        if(!pauseTisch1){
+            $('#tisch1titel').text("Tisch 1 - PAUSE");
+        } else {
+            $('#tisch1titel').text("Tisch 1");
+        }
         pauseTisch1 = !pauseTisch1;
     })
     $('#reset1').on('click', function (e) {
         var display = document.querySelector('#timeTisch1');
         clearInterval(timer1IntervalId);
         display.innerHTML = "20:00";
+        $('#start1').removeClass("disabled")
+        $('#start1').prop('disabled', false);
+        $('#pause1').prop('disabled', true);
+        $('#reset1').prop('disabled', true);
     })
 
     $('#start2').on('click', function (e) {
+
         startTimerTisch2();
-    })
+        // $('#start2').addClass("disabled")
+        $('#start2').prop('disabled', true);
+        $('#pause2').prop('disabled', false);
+        $('#reset2').prop('disabled', false);
+
+    });
     $('#pause2').on('click', function (e) {
+        if(!pauseTisch2){
+            $('#tisch2titel').text("Tisch 2 - PAUSE");
+        } else {
+            $('#tisch2titel').text("Tisch 2");
+        }
         pauseTisch2 = !pauseTisch2;
     })
     $('#reset2').on('click', function (e) {
         var display = document.querySelector('#timeTisch2');
         clearInterval(timer2IntervalId);
         display.innerHTML = "20:00";
+        $('#start2').removeClass("disabled")
+        $('#start2').prop('disabled', false);
+        $('#pause2').prop('disabled', true);
+        $('#reset2').prop('disabled', true);
     })
 
 };
